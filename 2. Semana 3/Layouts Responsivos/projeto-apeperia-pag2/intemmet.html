@@ -1,0 +1,97 @@
+EMMET
+
+header>img+nav>ul>li*6>a
+    - Abreviação para criar uma header com uma imagem e um nav, que contém uma lista com 6 li's, que contém a.
+    - Caso o comando não for, ir no final da linha e apertar ctrl+espaço, aparecerá um menu contextual e basta apertar enter que o código será executado novamente.
+
+section>h1+p+a
+    - Cria uma section com um h1, um parágrafo e um a
+
+section.destaques
+    - Utilizar o ponto diz que a seção irá ter uma classe chamada "destaques".
+
+section.destaques.container
+    - Adiciona a classe destaques e a container.
+
+section.destaques.container>h2.destaques_titulo+(a*2>figure.destaques_painel>img.destaques_painel-imagem+figc.destaques_painel-texto)+a.destaques_botao
+    - Os parenteses definem um limite.
+
+
+REM e EM
+    - Unidades de medida.
+    - EM: é uma unidade de medida relativa ao font-size na tag mãe do elemento que está sendo utilizado.
+        Significa efêmero (que muda ou que transita, variável)
+    - REM: Unidade de medida relativa ao font-size da tag com o maior nível hierarquico de todos, a tag "html".
+        Significa "root efêmero" (variável baseado na raiz)
+    - A vantagem em usar essas unidades de medida é que se adapta automaticamente de acordo com o browser utilizado.
+    - Utilizando o em, é possível controlar casos isolados, ao invés de controlar toda a página.
+
+SVG
+    - Formato de imagem formada por cálculos gerados por instrução de computador. É mais leve e não perde qualidade quando ampliada, no entanto possui poucos detalhes, sendo recomendada para imagens simples.
+
+VIEWPORT
+
+<meta name="viewport" content="width=device-width" initial-scale="1.0">
+    - Define o tamanho baseado no dispositivo utilizado.
+    - Initial-scale define quanto de zoom será dado na página, quanto o usuário poderá enxergar. Definir o valor como 1.0 garante que o tamanho sempre será proporcional ao dispositivo.
+
+VARIÁVEIS CSS:
+
+:root{}
+    - Tem a mesma função que a tag html, porém com peso e especifidade maior do que a tag html. (É um seletor)
+
+--nome-da-variavel: valor;
+    - Para inserir uma váriavel. Deve ser declarada dentro de algum seletor, geralmente o root.
+
+var(--branco)
+    - Forma de chamar as variáveis.
+
+UNIDADE DE MEDIDA VIEWPORT:
+
+width: 100vw;
+    - vw sigifica "viewport width" (largura da tela).
+    - vh significa "viewport height". (altura da tela)
+
+Diferença entre vw e px:
+    - px: medida fixa, não se altera com o aumento ou redução da tela.
+    - vw: Se adapta ao tamanho da tela, porém quanto maior, mais a imagem vai perdendo foco, sendo recomendado impor um limite de até onde ela irá se adaptar junto à tela.
+
+max-width: 600px;
+    - Adiciona uma unidade fixa, evitando que a imagem cresça demais e perca sua qualidade.
+
+LIDANDO COM IMAGENS
+
+background-image: url(../img/icone-dinheiro.png);
+    - Adiciona uma imagem através do CSS.
+    - Utilizado quando a imagem não interfere na compreensão da mensagem a ser passada. Caso interfira, a imagem deve ser referida no HTML.
+
+Tags address, video e br:
+
+address
+    - Engloba as informações de contato (telefone, e-mail...) e endereço.
+
+tag "br"
+    - Realiza uma quebra de linha.
+
+video
+    - Utilizada para usar um video na página através de um arquivo de video.
+
+controls
+    - Adiciona os botões de controle do video (play, pause, avançar...)
+
+
+Atributo Tittle:
+    - O leitor de tela até consegue saber que essa imagem é do Facebook ou do Twitter, mas ele não consegue saber que esse link vai para essas páginas, e que o link tem haver com a imagem, porque ele lê o “Alt” como algo isolado do link.
+    
+    - Então a solução para esse problema é justamente adicionarmos o atributo “title” para termos de “guiar” e depois nós vamos colocar o nome do site para onde esse link leva. Então, por exemplo: aqui no Facebook nós adicionamos a tag “img” normal, e na tag “a”, que vai ser tag mãe dessa tag “img”, nós adicionamos o atributo “title” que vai ser escrito Facebook”. O leitor de tela vai saber que aquele link vai levar para o Facebook e que o ícone faz parte da tag “a”.
+
+LAYOUT
+
+@media (min-width: 610px) {
+    - Permite modificar as configurações para a partir de um tamanho de tela específico. No exemplo, de 610 para cima, a cor da chamada será rosa.
+
+@media screen and (min-width: 610px) {
+    - Condição para especificar que é um tamanho de tela.
+
+@media print and (min-width: 610px) {
+    - Para impressão.

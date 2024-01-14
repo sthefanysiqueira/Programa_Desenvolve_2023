@@ -1,0 +1,142 @@
+forma 1: CSS INLINE
+
+<p style="font-size: 20px">
+    Aumenta o tamanho da fonte do texto para 20 pixels. OBS: o padrão é 16 pixels.
+    Também pode ser feito em outras tags.
+</p>
+
+<h1 style="text-align: center">
+    Alinha o conteúdo no centro da página.
+    Também pode ser feito em outras tags.
+</h1>
+
+
+forma 2: Todos os parágrafos de uma vez
+<style>
+    p {
+        text-align: center
+    }
+</style> Formata todos os parágrafos de uma só vez
+
+
+forma 3: Através da menção de um arquivo css exterior
+<link rel="stylesheet" href="style.css"
+
+backgroung: #CCCCCC>
+define o plano de fundo da linha como cinza
+
+body {
+    background: #CCCCCC
+} Toda a página passa a ter fundo cinza. OBS: É usada nessa forma no arquivo externo.
+
+strong {
+    color: red;
+} Define como vermelho os textos dentro da tag strong
+
+em strong {
+    color: red;
+} Define como vermelho todos os strongs que estão dentro da tag em.
+
+
+SOBRE AS CORES
+
+RGB - Red Green Blue
+# _ _ _ _ _ _
+Os dois primeiros são para o vermelho, os dois seguintes para o verde e os últimos para o azul
+
+0 = ausência de cor
+F = Máximo de cor
+
+#000000 - preto
+#FFFFFF - branco
+#FF0000 - vermelho
+
+RGB vai do 0 ao 255
+0 = ausência
+255 = Máximo
+
+rgb(255,255,255) - branco
+rgb(0, 0, 255) - azul
+
+<p id="missao"> O id faz referencia a uma formatação específica para essa linha que está no arquivo css </p>
+
+<img src="banner.jpg"> Busca a imagem banner.jpg e adiciona na pagina
+
+
+Apertar f12 na página abrirá a ferramenta do desenvolvedor
+
+height: altura em px
+width: largura em px ou %
+border: borda em px, com formato e cor
+padding: espaçamento interno em px. Controla-se todos os lados adicionando -top, etc ao lado do comando
+margin: espaçamento externo em px. Possui quatro digitos que definem o espaçamento respectivamente do topo, direita, baixo, esquerda.
+
+Trabalhando com listas
+
+<ul> Unordered List: Lista desordenada, a ordem não faz diferença</ul>
+
+<ol> Ordered List: lista ordenada. Como uma receita de bolo, os passos tem que ser seguidos em uma ordem específica </ol>
+
+<li> List Item: define quem serão os itens da lista </li>
+
+No CSS, ao fazer referencia a um identificador (usado para itens únicos), usa-se uma tralha (#)
+Ao usar uma classe (usada para itens que serão repetidos), usa-se um ponto (.)
+
+
+DIVISÕES DE conteúdo
+
+<div> tag de divisão </div>
+
+INLINE E BLOCK
+
+Block - A tag ocupa a largura inteira da página, bloqueando o conteúdo daquela linha.
+
+Inline - Permite que existam outros elementos na lateral. Uma imagem, por exemplo, não altera o conteúdo. Um elemento inline não permite alterar o espaçamento externo e interno dele.
+
+inline-block - Ocupa só o tamanho do conteúdo, mas permite mexer na largura e espaçamentos. É uma mistura das duas condições anteriores.
+
+ARRUMANDO A LISTA
+
+text-transform: uppercase - Transforma, visualmente, as letras de um texto em maiúsculas
+
+font-weight: bold; - É o peso da fonte. Bold define a fonte como negrito
+
+text-decoration: none; - Decoração de texto. Por exemplo, os sublinhados dos links. O none, está desativando estas decorações
+
+COMO FUNCIONA O POSICIONAMENTO
+
+position: static - posição padrão inicial
+
+position: relative - permite modificar a posição, espaçamento, etc. deslocar para os lados.
+
+position: absolute - Permite modificar o posicionamento absoluto em relação a outra coisa, por exemplo, em relação à pagina toda, ao cabeçalho, etc.
+
+AJUSTANDO O TAMANHO DOS ELEMENTOS
+
+box-sizing: border box - Define a largura como definitiva. Alterar a distância do espaçamento interno não irá mais afetar o espaço externo
+
+BORDAS ARREDONDADAS
+
+border-radius - Controla o raio da borda, permitindo tornar as bordas mais arredondadas. podem ser configurados todos os lados de uma vez apenas definindo o valor em pixels, ou de um por um escrevendo border-radius-top-left ou border-radius-bottom-right, por exemplo.
+
+PSEUDO-CLASSES DE ESTADO / COMPORTAMENTO DOS ELEMENTOS
+
+hover - controla o comportamento de um elemento quando se passa o mouse por cima dele.
+
+active - controla o comportamento de um elemento ao clicar ou pressinar ele.
+
+IMAGEM DE FUNDO
+
+background: url("bg.jpg") - define uma imagem como plano de fundo. Essa imagem ocupa todo o espaço do elemento.
+
+TRANSIÇÕES
+
+transition: cria um tempo de transição entre as mudanças definidas para quando o mouse está ou não sobre o objeto.
+
+cursor: Faz com que o ícone do mouse fique como um indicador sempre que passado por cima do objeto especificado.
+
+TRANSFORMAÇÕES
+
+transform: scale(); - Aumenta o tamanho do objeto proporcionalmente de acordo com o tamanho definido nos parênteses.
+
+transform: rotate(xdeg); - realiza uma rotação do objeto, de acordo com os graus informados nos parênteses.

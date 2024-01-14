@@ -1,0 +1,111 @@
+https://www.alura.com.br/apostila-html-css-javascript/19CA-novos-layouts-com-flexbox
+
+OBS: Quando queremos alinhar elementos com flexbox, colocamos o 'display: flex' no pai dos elementos.
+
+float:
+
+
+FLEXIBLE BOX (FLEXBOX):
+
+display: flex;
+    - Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas. Essas propriedades devem ser usadas no elemento que é um flex container. Por padrão, quando aplicamos display: flex para um elemento, todos os filhos ficam um do lado do outro como se estivessem sob o efeito de display: inline. Os elementos com flex também irão possuir a mesma altura, logo, o flex deixa os filhos com a mesma aparência dos pais.
+
+flex-direction: row;
+    - Vem por padrão. Deixa uns elementos um ao lado do outro.
+
+flex-direction: column;
+    - Alinha os elementos em colunas, um abaixo do outro.
+
+flex-wrap: wrap;
+    - Realiza uma quebra de coluna quando o elemento ultrapassa o tamanho do pai.
+
+flex-flow: column wrap;
+    - Abreviação do column e wrap para que seja usado um comando só que faça as duas coisas.
+
+
+align-items: center;
+    - Alinha os itens no centro.
+
+
+DISTRIBUIÇÕES DE ESPAÇO:
+
+justify-content: space-between;
+    - Insere um espaço vazio entre os elementos.
+
+justify-content: space-around;
+    - Insere um espaço em volta dos elementos.
+
+justify-content: center
+    - Coloca todo o espaço à esquerda e à direita, jogando o conteúdo para o meio.
+
+justify-content: flex-start
+    - Coloca todo o espaço à direita, jogando o conteúdo para a esquerda. É o que vem por padrão.
+
+justify-content: flex-end
+    - Coloca todo o espaço a esquerda, jogando o conteúdo para a direita.
+
+
+FLEX-ITENS:
+
+order: 
+    - Por padrão, os flex-itens possuem valor "order: 0".
+    - Para alterar o objeto e fazer com que fique em primeiro lugar, escrevemos "order: -1".
+    - Para alterar o objeto e fazer com que fique em último lugar, escrevemos "order: 1".
+
+SITE PARA CONSULTA:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+flex-grow: 1;
+    - Diz ao flex-item que ele deve crescer, aumentando o tamanho e preenchendo espaços vazios.
+    - Podem ser definidos outros valores além de 1.
+    - Se ao em vez de 1 tivéssemos colocado 2 o espaço total desta parte seria dividido em 3 cabendo ao vídeo 2/3 e ao Vantagens 1/2. Da mesma maneira podemos distribuir mais espaço para o Vantagens do que para o vídeo. Assim, colocando para o Vantagens um espaço maior, flex-grow: 3; teríamos 3/4 do espaço para o vantagens.
+
+flex-shrink: 2;
+    - Oposto do grow. Usado para diminuir os elementos.
+
+
+Quais são as propriedades que funcionam SOMENTE nos flex container e quais são as que funcionam nos flex items?
+
+    - container:
+    
+        display: flex
+        flex-direction
+        justify-content
+        flex-wrap
+        flex-flow
+        align-items
+        align-content
+    
+    - flex item:
+    
+        order
+        flex-grow
+        flex-shrink
+        flex-basis
+        flex
+        align-self
+
+flex-basis:
+    - Recebe o número absoluto da largura.
+
+flex: 1 1 25%;
+    - Forma de utilizar os flex grow, shring e basis em um só comando.
+    - O primeiro argumento é para o flex-grow, o segundo para o flex-shrink e o terceiro para o flex basis.
+    - Pode ser usado só os dois primeiros, ou incluir o basis também.
+
+
+
+Invertendo a ordem de todos os elementos
+
+flex-wrap: wrap-reverse
+    - Inverte a ordem das linhas. Tudo o que está em baixo vai para cima.
+
+flex-direction: row-reverse;
+    - Inverte a ordem dos elementos nas linhas.
+
+flex-direction: column-reverse
+    - Usado nos casos em que usamos flex-direction: column. Inverterá a ordem dos elementos nas linhas.
+
+    align-self
+    - Aplicada ao flex item. Faz com que ele se alinhe individualmente.
+    - Faz a mesma coisa que o align-items, porém só alinha um único elemento e é colocada no flex item.

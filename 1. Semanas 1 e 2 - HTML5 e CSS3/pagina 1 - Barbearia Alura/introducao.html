@@ -1,0 +1,147 @@
+<tag> //usadas para marcar o texto </tag>
+
+<!DOCTYPE hmtl> É uma tag de informação. Usada para definir a versão do html que está sendo usada, nesse caso, digitar apenas html, dirá que está sendo rodada a última versão lançada
+
+<html> marca todo oque é o html que será renderizado no computador, deve ser fechada na última linha do programa
+
+<html lang="pt-br"> Informa ao navegador que a linguagem utilizada é a portuguesa, oferecendo assim uma opção de tradução para os computadores com configuração em outro idioma. OBS: Não é preciso utilizar a tag de html acima nesse caso.
+
+    <head>
+
+        <meta charset="UTF-8"> Passa a informação para o navegador permitindo que sejam lidos caracteres específicos da língua portuguesa, como acentos, cedilha, independente do idioma da máquina que está sendo utilizada.
+
+        <meta name="viewport" content="width=device-width"> Faz com que seja feita uma "pesquisa" para descobrir o tamanho da tela que está sendo utilizada para, assim, redistribuir melhor os elementos. "Largura é igual a largura do dispositivo"
+
+        <title>Barbearia Alura</title> Define o título da página na barra de endereços do navegador
+
+        <link rel="stylesheet" href="reset.css"> Limpa as configurações de estilo padrões do navegador. Deve ser usada antes da referência ao arquivo CSS.
+
+    </head> A cabeça. Envolve as informações que serão passadas para o navegador, mas não serão exibidas
+    
+    <body>
+
+        <header> Divisão do cabeçalho. É a primeira informação a ser apresentada. </header>
+
+        <main>
+        
+            <h> marca o titulo da pagina e possui 6 niveis </h>
+
+            <p> tag paragrafo: Marca os paragrafos do texto, devem ser inseridos para cada paragrafo </p>
+            
+            <strong> Tag de strong: Coloca parte do texto em negrito, dando destaque </strong>
+        
+            <em> Tag de enfase: Transforma o texto interior em italico </em>
+
+            ESTRUTURANDO A NAVEGAÇÃO:
+
+            <a> Funciona como uma âncora, fazendo uma ligação que te leva para outra página. Deve ser inserido um endereço de referência (href), como nas imagens. </a>
+
+        </main> Envolve o conteúdo principal do programa
+
+        <footer> Envolve o rodapé da página </footer>
+    
+    </body> O corpo. Envolve o conteúdo que será exibido no navegador
+
+</html>
+
+CARACTERES ESPECIAIS
+
+Site: unicode
+https://unicode-table.com/pt/00A9/
+Pegar o valor de entidade
+
+CAMPOS BÁSICOS
+
+<form> Cria um formulário 
+    
+    <label> Ligado ao input. Informa o que deverá ser inserido na entrada de dados. Funciona como uma etiqueta para o input. </label>
+    
+    <input type="text"> permite ao usuário inserir um dado, no caso, um texto, como especificado no tipo. Necessita de um id, para funcionar junto com o label.
+
+    <input type="submit" value="Enviar formulário"> Adiciona um botão de Enviar os dados para outro local.
+
+    OBS: id e for são identificadores.
+
+    <textarea cols="70" rows="10" id="mensagem"></textarea> Insere uma caixa de texto, onde é possível digitar qualquer coisa, no exemplo, com 70 colunas e 10 linhas. Necessita de um id.
+
+    <input type="radio" value="email" id="radio-email"> Cria uma "radio box", uma caixa de seleção onde vc pode escolher até 3 opções referentes a um campo.
+
+    OBS¹: para que seja possível escolher apenas uma das opções, é preciso adicionar um "nome" em cada input. Ex:
+    <label for="radio-telefone">Telefone</label>
+    <input type="radio" name="contato" value="telefone" id="radio-telefone">
+
+    OBS²:  Opção para fazer o label e input juntos:
+    <label><input type="checkbox">Gostaria de receber nossas novidades por email?</label>
+
+    <select>
+        <option>Manhã</option>
+        <option>Tarde</option>
+        <option>Noite</option>
+    </select> Cria um campo de seleção, que contém opções para escolher. As opções ficam em estilo "Drop-down", ou seja, aparecem uma abaixo da outra ao clicar na caixa.
+
+</form>
+
+HIERARQUINA NO CSS
+
+inline > id > class > tag
+ao usar dois desses valores separadamente, o mais forte irá sobrepor aos mais fracos. Ex: um id de parágrafo com cor definida para vermelho e uma tag de parágrafo definida para roxo, ao atualizar o programa, o parágrafo ficará na for vermelha, pois o valor vem primeiro na hierarquia.
+
+INPUTS PARA CELULARES
+
+<input type="tel" id="telefone" class="input-padrao"> Quando um usuário clica na caixa, seu teclado muda para a aba de números, facilitando seu preenchimento.
+
+Site com outros inputs para celulares:
+http://mobileinputtypes.com/
+
+
+DADOS IMPORTANTES NOS INPUTS:
+
+required: Adicionar required ao input torna obrigatório preenchê-lo para que as informações sejam enviadas. EX:
+    for="nomesobrenome">Nome e sobrenome</label><input type="text" id="nomesobrenome" class="input-padrao" required>
+
+placeholder: Adicionar um placeholder faz com que apareça um "texto de exemplo" na caixa de texto. Quando o usuário começa a digitar, esse placeholder some. EX:
+    <label for="email">Email</label>
+    <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+
+cheked: Adicionar "cheked" a um input, Radio Box ou a uma Checkbox faz com que uma delas seja marcada primeiro, ou seja, ela já vem marcada ao abrir o formulário, e o usuário pode trocar a opção como desejar após. EX:
+    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+
+<fieldset>
+        
+    <legend> O título da fieldset (título de um grupo de campos em qualquer formulário) </legend>
+
+</fieldset> Utilizada quando se tem um campo e um texto ou vários campos referentes a alguma coisa. Funciona como uma div.
+        
+
+alt: adiciona descrições em imagens, ajudando na acessibilidade. Ex:
+    <img src="logo.png" alt="Logo da Barbearia Alura">
+
+
+TABELA BÁSICA
+
+<table> Cria uma tabela (uma sequência de linhas e colunas) 
+    <tr> Uma linha (table row) 
+        <td> Uma célula </td>
+    </tr>
+
+    <thead> É o cabeçalho da tabela
+        <th> Primeira linha da tabela </th>
+    </thead>
+
+    <tbody> Corpo da tabela. Nessa área as células são inseridas em td.
+        
+        colspan=X - Agrupa X células. Por exemplo, uma linha que deveria ter 5 células, passa a mostrar apenas 1. Ex: Agrupamento de uma tabela de 5 colunas:
+        <tr>
+            <td colspan="5">Rio de Janeiro</td>
+        </tr>
+     
+    </tbody>
+    
+    <tfoot> Representa o rodapé da tabela </tfoot>
+
+</table>
+
+<section> Faz uma divisão por conteúdo complexo, semanticamente homogêneo (onde o conteúdo tem o mesmo significado, o mesmo sentido). É diferente da div pois a div trata-se apenas de uma divisão visual. </section>
+
+<iframe> Incorpora mapas e videos à página </iframe>
